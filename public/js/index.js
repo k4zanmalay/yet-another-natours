@@ -44,7 +44,7 @@ if(userDataForm) {
   });
 }
 
-if(userPasswordForm) mlsmglsmglsmglmglsmlsmglsmgslmgslmglmlsglmslgmlsmglmg{
+if(userPasswordForm) {
   userPasswordForm.addEventListener('submit', async  e => {
     e.preventDefault();
     document.querySelector('.btn--save-password').textContent = 'Updating...'

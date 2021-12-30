@@ -8,6 +8,7 @@ const hpp = require('hpp');
 const morgan = require('morgan');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const viewRouter = require('./routes/viewRoutes');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -60,6 +61,8 @@ app.use(
     ]
   })
 );
+//Compress response
+app.use(compression());
 //Get request timestamp
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
